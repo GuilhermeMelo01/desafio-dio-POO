@@ -1,10 +1,13 @@
 package br.com.dio.desafio.dominio;
 
+import lombok.Data;
+
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 
+@Data
 public class Dev {
     private String nome;
     private Set<Conteudo> conteudoInscritos = new LinkedHashSet<>();
@@ -33,31 +36,6 @@ public class Dev {
                 .mapToDouble(Conteudo::calcularXP)
                 .sum();
 
-    }
-
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Set<Conteudo> getConteudoInscritos() {
-        return conteudoInscritos;
-    }
-
-    public void setConteudoInscritos(Set<Conteudo> conteudoInscritos) {
-        this.conteudoInscritos = conteudoInscritos;
-    }
-
-    public Set<Conteudo> getConteudosConcluidos() {
-        return conteudosConcluidos;
-    }
-
-    public void setConteudosConcluidos(Set<Conteudo> conteudosConcluidos) {
-        this.conteudosConcluidos = conteudosConcluidos;
     }
 
     @Override

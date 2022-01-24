@@ -1,5 +1,8 @@
 package br.com.dio.desafio.dominio;
 
+import lombok.Data;
+
+@Data
 public class Curso extends Conteudo {
     private int cargaHoraria;
 
@@ -7,15 +10,6 @@ public class Curso extends Conteudo {
     public double calcularXP() {
         return XP_PADRAO + cargaHoraria;
     }
-
-    public int getCargaHoraria() {
-        return cargaHoraria;
-    }
-
-    public void setCargaHoraria(int cargaHoraria) {
-        this.cargaHoraria = cargaHoraria;
-    }
-
 
     @Override
     public String toString() {
